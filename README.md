@@ -12,6 +12,14 @@ npm ls --depth=0
 ```bash
 git reset --hard HEAD~1
 ```
+### List branches with commits pending to push
+```bash
+git log --branches --not --remotes
+```
+### Generate ssh key
+```bash
+ssh-keygen -t ed25519 -C "email"
+```
 
 ##
 ### Debug webview from physical device
