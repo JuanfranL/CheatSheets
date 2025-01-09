@@ -9,7 +9,8 @@ npm ls --depth=0
 ### Authentication token error
 > Couldn't get an authentication token for {{registry}}.
 
-It is solved deleting user's **_.npmrc_** or deleteing the info inside
+It is solved deleting user's **_.npmrc_** or deleteing the info inside.
+
 Then execute again:
 ```bash
 vsts-npm-auth -config .npmrc
