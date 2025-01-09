@@ -34,6 +34,9 @@ ssh-keygen -t ed25519 -C "email"
 ### Debug webview from physical device
 1. Connect device to the computer via usb
 2. Enable usb debugging on the device
-3. Access here: [Chrome inspect devices](http://chrome://inspect/#devices "Chrome inspect devices") (chrome://inspect/#devices)
-4. Enable permissions on the popup in the device
-5. Inspect desired webview
+3. Access here on chrome navigation bar:
+   ```
+   chrome://inspect/#devices
+   ```
+5. Enable permissions on the popup in the device
+6. Inspect desired webview
