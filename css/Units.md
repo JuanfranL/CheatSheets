@@ -1,113 +1,176 @@
 
-# CSS Units Guide
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #00f2fe;
+            overflow-x: auto;
+        }
+        code {
+            background: #e4e4e4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .example {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom, #4facfe, #00f2fe);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5vw;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        .grid div {
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Units Guide</h1>
+    <p>Esta guía incluye explicaciones teóricas, ejemplos de código y ejemplos prácticos que puedes inspeccionar en la consola del navegador.</p>
 
-## Tipos de Unidades
+    <h2>Tipos de Unidades</h2>
+    <p>En CSS, las unidades se dividen en dos categorías principales:</p>
+    <h3>Unidades Absolutas</h3>
+    <ul>
+        <li><code>px</code> (píxeles): La única unidad absoluta que no cambia. Útil para elementos con tamaños fijos.</li>
+    </ul>
+    <h3>Unidades Relativas</h3>
+    <p>Dependientes de otras variables como:</p>
+    <ul>
+        <li><code>rem</code> y <code>em</code>: Relativas al tamaño de fuente raíz o del elemento padre.</li>
+        <li><code>%</code>: Relativa al tamaño del contenedor padre.</li>
+        <li><code>vw</code> y <code>vh</code>: Relativas al ancho y alto del viewport.</li>
+        <li><code>vmin</code> y <code>vmax</code>: Relativas al tamaño mínimo o máximo del viewport.</li>
+        <li><code>fr</code>: Fracciones de un contenedor en un <code>grid</code>.</li>
+        <li><code>ch</code>: Tamaño del carácter "0" de la fuente.</li>
+    </ul>
 
-En CSS, las unidades se dividen en dos categorÃ­as principales:
+    <h2>Tabla Resumen</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Unidad</th>
+                <th>Relativa a</th>
+                <th>Uso principal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>px</code></td>
+                <td>Ninguna (absoluta)</td>
+                <td>Tamaños fijos</td>
+            </tr>
+            <tr>
+                <td><code>rem</code></td>
+                <td>Tamaño raíz</td>
+                <td>Texto escalable</td>
+            </tr>
+            <tr>
+                <td><code>em</code></td>
+                <td>Tamaño del elemento padre</td>
+                <td>Escalado relativo</td>
+            </tr>
+            <tr>
+                <td><code>%</code></td>
+                <td>Contenedor padre</td>
+                <td>Diseños flexibles</td>
+            </tr>
+            <tr>
+                <td><code>vw</code></td>
+                <td>Ancho del viewport</td>
+                <td>Diseños responsivos</td>
+            </tr>
+            <tr>
+                <td><code>vh</code></td>
+                <td>Alto del viewport</td>
+                <td>Alturas responsivas</td>
+            </tr>
+            <tr>
+                <td><code>fr</code></td>
+                <td>Contenedor en <code>grid</code></td>
+                <td>Distribución en rejillas</td>
+            </tr>
+            <tr>
+                <td><code>ch</code></td>
+                <td>Ancho del carácter "0"</td>
+                <td>Anchos predecibles</td>
+            </tr>
+        </tbody>
+    </table>
 
-### Unidades Absolutas
-- **`px` (pÃ­xeles)**: La Ãºnica unidad absoluta que no cambia. Ãštil para elementos con tamaÃ±os fijos.
+    <h2>Ejemplos Prácticos</h2>
 
-### Unidades Relativas
-Dependientes de otras variables como:
-- **`rem` y `em`**: Relativas al tamaÃ±o de fuente raÃ­z o del elemento padre.
-- **`%`**: Relativa al tamaÃ±o del contenedor padre.
-- **`vw` y `vh`**: Relativas al ancho y alto del viewport.
-- **`vmin` y `vmax`**: Relativas al tamaÃ±o mÃ­nimo o mÃ¡ximo del viewport.
-- **`fr`**: Fracciones de un contenedor en un `grid`.
-- **`ch`**: TamaÃ±o del carÃ¡cter "0" de la fuente.
+    <div class="example">
+        <h3>Texto escalable con <code>rem</code></h3>
+        <p style="font-size: 1rem;">Este texto usa <strong>1rem</strong>, relativo al tamaño de fuente raíz.</p>
+        <p style="font-size: 2rem;">Este texto usa <strong>2rem</strong>, escalando al doble del tamaño raíz.</p>
+    </div>
 
----
+    <div class="example hero">
+        <p>Diseño responsivo usando <code>vw</code> y <code>vh</code></p>
+    </div>
 
-## Â¿CÃ³mo elegir la unidad adecuada?
+    <div class="example">
+        <h3>Porcentajes para contenedores flexibles</h3>
+        <div style="width: 80%; background: #e4e4e4; padding: 10px;">
+            Este contenedor ocupa el <strong>80%</strong> del ancho de su padre.
+        </div>
+    </div>
 
-### Ejemplos prÃ¡cticos
+    <div class="example">
+        <h3>Uso combinado con <code>clamp()</code></h3>
+        <p style="font-size: clamp(18px, 5vw, 36px);">
+            Este texto utiliza <strong>clamp()</strong>, adaptándose entre 18px y 36px según el ancho del viewport.
+        </p>
+    </div>
 
-1. **Texto escalable con `rem`**  
-    ```css
-    html {
-        font-size: 16px; /* Base */
-    }
+    <div class="example grid">
+        <div>1fr</div>
+        <div>2fr</div>
+    </div>
 
-    h1 {
-        font-size: 2rem; /* Escala con el tamaÃ±o raÃ­z */
-    }
-
-    p {
-        font-size: 1rem; /* Igual al tamaÃ±o raÃ­z */
-    }
-    ```
-
-2. **DiseÃ±os responsivos con `vw` y `vh`**  
-    ```css
-    .hero {
-        height: 100vh; /* Ocupa toda la altura del viewport */
-        font-size: 5vw; /* Escala con el ancho del viewport */
-    }
-    ```
-
-3. **Porcentajes para contenedores flexibles**  
-    ```css
-    .container {
-        width: 80%; /* 80% del ancho del contenedor padre */
-        height: 50%; /* 50% del alto del contenedor padre */
-    }
-    ```
-
-4. **Uso combinado con `clamp()`**  
-    ```css
-    h1 {
-        font-size: clamp(18px, 2vw, 36px); /* MÃ­nimo 18px, mÃ¡ximo 36px */
-    }
-    ```
-
-5. **Grid Layout con `fr`**  
-    ```css
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 2fr; /* Dos columnas, 1 parte y 2 partes */
-    }
-    ```
-
----
-
-## Buenas prÃ¡cticas
-
-1. **Evita redundancias**:  
-   Usa `0` sin unidades:
-    ```css
-    margin: 0; /* Correcto */
-    margin: 0px; /* Redundante */
-    ```
-
-2. **No definas `line-height` si no es necesario**:  
-    ```css
-    p {
-        font-size: 1rem;
-        /* line-height innecesario si no necesitas ajuste especÃ­fico */
-    }
-    ```
-
-3. **Considera accesibilidad**: Usa `rem` en lugar de `px` para elementos relacionados con texto.
-
-4. **Entiende la relaciÃ³n entre unidades**:  
-   Por ejemplo, `em` escala con el padre, mientras que `rem` escala con el tamaÃ±o raÃ­z.
-
----
-
-## Tabla Resumen
-
-| Unidad  | Relativa a                      | Uso principal                         |
-|---------|---------------------------------|---------------------------------------|
-| `px`    | Ninguna (absoluta)             | TamaÃ±os fijos                         |
-| `rem`   | TamaÃ±o raÃ­z                    | Texto escalable                       |
-| `em`    | TamaÃ±o del elemento padre      | Escalado relativo                     |
-| `%`     | Contenedor padre               | DiseÃ±os flexibles                     |
-| `vw`    | Ancho del viewport             | DiseÃ±os responsivos                   |
-| `vh`    | Alto del viewport              | Alturas responsivas                   |
-| `fr`    | Contenedor en `grid`           | DistribuciÃ³n en rejillas              |
-| `ch`    | Ancho del carÃ¡cter "0"         | Anchos predecibles                    |
-
----
-
-Con este archivo, puedes recordar cÃ³mo y cuÃ¡ndo usar cada unidad CSS para escribir cÃ³digo eficiente y adaptativo.
+    <footer>
+        <p>Inspecciona los elementos en la consola para ver las unidades aplicadas.</p>
+    </footer>
+</body>
+</html>
