@@ -49,95 +49,9 @@
             padding: 20px;
             text-align: center;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background: #f4f4f4;
-        }
     </style>
 </head>
 <body>
-    <h1>CSS Units Guide</h1>
-    <p>Esta guía incluye explicaciones teóricas, ejemplos de código y ejemplos prácticos que puedes inspeccionar en la consola del navegador.</p>
-
-    <h2>Tipos de Unidades</h2>
-    <p>En CSS, las unidades se dividen en dos categorías principales:</p>
-    <h3>Unidades Absolutas</h3>
-    <ul>
-        <li><code>px</code> (píxeles): La única unidad absoluta que no cambia. Útil para elementos con tamaños fijos.</li>
-    </ul>
-    <h3>Unidades Relativas</h3>
-    <p>Dependientes de otras variables como:</p>
-    <ul>
-        <li><code>rem</code> y <code>em</code>: Relativas al tamaño de fuente raíz o del elemento padre.</li>
-        <li><code>%</code>: Relativa al tamaño del contenedor padre.</li>
-        <li><code>vw</code> y <code>vh</code>: Relativas al ancho y alto del viewport.</li>
-        <li><code>vmin</code> y <code>vmax</code>: Relativas al tamaño mínimo o máximo del viewport.</li>
-        <li><code>fr</code>: Fracciones de un contenedor en un <code>grid</code>.</li>
-        <li><code>ch</code>: Tamaño del carácter "0" de la fuente.</li>
-    </ul>
-
-    <h2>Tabla Resumen</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Unidad</th>
-                <th>Relativa a</th>
-                <th>Uso principal</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>px</code></td>
-                <td>Ninguna (absoluta)</td>
-                <td>Tamaños fijos</td>
-            </tr>
-            <tr>
-                <td><code>rem</code></td>
-                <td>Tamaño raíz</td>
-                <td>Texto escalable</td>
-            </tr>
-            <tr>
-                <td><code>em</code></td>
-                <td>Tamaño del elemento padre</td>
-                <td>Escalado relativo</td>
-            </tr>
-            <tr>
-                <td><code>%</code></td>
-                <td>Contenedor padre</td>
-                <td>Diseños flexibles</td>
-            </tr>
-            <tr>
-                <td><code>vw</code></td>
-                <td>Ancho del viewport</td>
-                <td>Diseños responsivos</td>
-            </tr>
-            <tr>
-                <td><code>vh</code></td>
-                <td>Alto del viewport</td>
-                <td>Alturas responsivas</td>
-            </tr>
-            <tr>
-                <td><code>fr</code></td>
-                <td>Contenedor en <code>grid</code></td>
-                <td>Distribución en rejillas</td>
-            </tr>
-            <tr>
-                <td><code>ch</code></td>
-                <td>Ancho del carácter "0"</td>
-                <td>Anchos predecibles</td>
-            </tr>
-        </tbody>
-    </table>
-
     <h2>Ejemplos Prácticos</h2>
 
     <div class="example">
