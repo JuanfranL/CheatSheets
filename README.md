@@ -32,7 +32,12 @@ git log --branches --not --remotes
 ssh-keygen -t ed25519 -C "email"
 ```
 
-##
+## nswag
+### Process is terminating due to StackOverflowException.
+> Process is terminating due to StackOverflowException.
+Look for circular dependency in Json file usually JToken or JObject
+
+## :iphone:
 ### Debug webview from physical device
 1. Connect device to the computer via usb
 2. Enable usb debugging on the device
