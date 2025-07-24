@@ -31,6 +31,10 @@ git log --branches --not --remotes
 ```bash
 ssh-keygen -t ed25519 -C "email"
 ```
+### Reset branch to origin state
+```bash
+git reset --hard origin/branch
+```
 
 ## nswag
 ### Process is terminating due to StackOverflowException.
