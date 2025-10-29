@@ -35,6 +35,14 @@ ssh-keygen -t ed25519 -C "email"
 ```bash
 git reset --hard origin/branch
 ```
+### Reset branch to specific commit
+```bash
+git reset --hard commit-sha
+```
+then
+```bash
+ git push -f origin branch
+```
 
 ## nswag
 ### Process is terminating due to StackOverflowException.
